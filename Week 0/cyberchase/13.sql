@@ -1,2 +1,1 @@
-SELECT * FROM "episodes"
-WHERE column1 = value1 AND column2 = value2;
+SELECT * FROM "episodes" WHERE "air_date" LIKE value1 AND column2 = value2;
