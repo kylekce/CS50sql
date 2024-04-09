@@ -1,3 +1,3 @@
-SELECT COUNT("id")
+SELECT "id"
 FROM "players"
 WHERE "debut" IS NULL;
