@@ -1,0 +1,1 @@
+SELECT ROUND(AVG("height"), 2), ROUND(AVG("weight"), 2)
