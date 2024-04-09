@@ -1,1 +1,1 @@
-SELECT count("episode") FROM "episode" WHERE "year" 
+SELECT count("id") FROM "episodes" WHERE "year" > '2018-01-01' AND "year" < '2023-12-31';
