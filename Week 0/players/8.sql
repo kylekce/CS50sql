@@ -1,3 +1,3 @@
-SELECT ROUND(AVG("height"), 2) as, ROUND(AVG("weight"), 2)
+SELECT ROUND(AVG("height"), 2) as 'Average Height', ROUND(AVG("weight"), 2) as 'Average Weight'
 FROM "players"
-WHERE "debut" >= '2000-01-01' AND "throws" = 'R';
+WHERE "debut" >= '2000-01-01';
