@@ -1,1 +1,1 @@
-SELECT * FROM "episodes" WHERE "air_date" LIKE '2023%' AND "air_date";
+SELECT * FROM "episodes" WHERE "air_date" LIKE '2023%' AND "topic" IS NOT NULL;
