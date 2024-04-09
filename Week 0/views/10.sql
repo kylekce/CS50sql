@@ -1,1 +1,1 @@
-SELECT "english_title" as 'Title'
+SELECT "english_title" AS 'Title' WHERE "author" = 'Hiroshige' ORDER BY "entropy"
