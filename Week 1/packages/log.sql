@@ -1,6 +1,7 @@
 
 -- *** The Lost Letter ***
-SELECT * FROM "mail" WHERE message LIKE '%lost letter%';
+SELECT * FROM "packages" JOIN "addresses" ON "packages"."from_address_id" = "addresses"."id";
+
 -- *** The Devious Delivery ***
 
 -- *** The Forgotten Gift ***
