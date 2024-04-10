@@ -16,7 +16,7 @@ WHERE "id" = (
     FROM "packages"
     WHERE "id" = 384
 );
--- Type: "type" = "residential"
+-- Type: "type" = "Residential"
 
 SELECT "address"
 FROM "addresses"
@@ -28,18 +28,16 @@ WHERE "id" = (
 -- Address: "address" = "2 Finnigan Street"
 
 -- *** The Devious Delivery ***
-SELECT "id", "contents"
+SELECT "id", "contents", "to_address_id"
 FROM "packages"
 WHERE "from_address_id" IS NULL;
--- Package: "id" = 5098, "contents" = "Duck debugger"
+-- Package: "id" = 5098, "contents" = "Duck debugger", "to_address_id" = 50
 
-SELECT "type"
+SELECT "address", "type"
 FROM "addresses"
-WHERE "id" = (
-    SELECT "from_address_id"
-    FROM "packages"
-    WHERE "id" = 5098
-);
+WHERE "id" = 50;
+-- Address: "address" = "123 Sesame Street", "type" = "Residential"
+
 
 -- *** The Forgotten Gift ***
 
