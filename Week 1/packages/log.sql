@@ -28,8 +28,18 @@ WHERE "id" = (
 -- Address: "address" = "2 Finnigan Street"
 
 -- *** The Devious Delivery ***
+SELECT "id", "contents"
+FROM "packages"
+WHERE "from_address_id" IS NULL;
+-- Package: "id" = 5098, "contents" = "Duck debugger"
 
-
+SELECT "type"
+FROM "addresses"
+WHERE "id" = (
+    SELECT "from_address_id"
+    FROM "packages"
+    WHERE "id" = 5098
+);
 
 -- *** The Forgotten Gift ***
 
