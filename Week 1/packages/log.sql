@@ -38,9 +38,9 @@ FROM "addresses"
 WHERE "id" = (
     SELECT "address_id"
     FROM "scans"
-    WHERE "id" = 5098 AND "action" = 'Drop'
+    WHERE "package_id" = 5098 AND "action" = 'Drop'
 );
--- Address: "address" = "123 Sesame Street", "type" = "Residential"
+-- Address: "address" = "7 Humboldt Place", "type" = "Police Station"
 
 -- *** The Forgotten Gift ***
 SELECT "id", "contents", "from_address_id" 
