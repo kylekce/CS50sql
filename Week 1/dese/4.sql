@@ -1,4 +1,4 @@
 SELECT "city", COUNT("type")
 FROM "schools"
-GROUP BY "type"
+HAVING "type" = 'Public School'
 LIMIT 10;
