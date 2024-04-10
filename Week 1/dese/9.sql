@@ -1,5 +1,6 @@
-SELECT "name", "pupils"
+SELECT "name"
 FROM "districts"
 JOIN "expenditures" ON "districts"."id" = "expenditures"."district_id"
 GROUP BY "name"
-HAVING "pupils" < 10;
+ORDER BY "pupils" ASC
+LIMIT 1;
