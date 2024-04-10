@@ -1,3 +1,3 @@
-SELECT DISTINCT "name", "city"
+SELECT "name", "city"
 FROM "schools"
-WHERE "type" = 'Public School' OR "type" = 'Charter School';
+WHERE "state" = 'MA' AND "type" = 'Public School';
