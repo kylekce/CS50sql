@@ -1,3 +1,3 @@
-SELECT COUNT(*), "name", "city"
+SELECT DISTINCT "name", "city"
 FROM "schools"
 WHERE "type" = 'Public School' OR "type" = 'Charter School';
