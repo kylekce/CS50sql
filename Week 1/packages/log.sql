@@ -52,11 +52,13 @@ WHERE "from_address_id" = (
 );
 -- Package: "id" = 9523, "contents" = "Flowers", "from_address_id" = 9873
 
+SELECT "driver_id", "action", "timestamp"
+FROM "scans"
+WHERE "package_id" = 9523
+ORDER BY "timestamp";
+-- Driver: "driver_id" = 17, "action" = "Pick", "timestamp" = "2023-08-23 19:41:47.913410"
+
 SELECT "name"
 FROM "drivers"
-WHERE "id" = (
-    SELECT "driver_id"
-    FROM "scans"
-    WHERE "package_id" = 9523
-);
--- Driver: "name" = "Maegan"
+WHERE "id" = 17;
+-- Name: "name" = "Mikel"
