@@ -38,6 +38,21 @@ FROM "addresses"
 WHERE "id" = 50;
 -- Address: "address" = "123 Sesame Street", "type" = "Residential"
 
-
 -- *** The Forgotten Gift ***
+SELECT "id", "contents", "from_address_id" 
+FROM "packages" 
+WHERE "from_address_id" = (
+    SELECT "id" 
+    FROM "addresses" 
+    WHERE "address" = '109 Tileston Street'
+);
+-- Package: "id" = 9523, "contents" = "Flowers", "from_address_id" = 9873
 
+SELECT "name"
+FROM "drivers"
+WHERE "id" = (
+    SELECT "driver_id"
+    FROM "scans"
+    WHERE "package_id" = 9523
+);
+-- Driver: "name" = "Maegan"
