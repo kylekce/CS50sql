@@ -13,5 +13,5 @@ JOIN "salaries" ON "players"."id" = "salaries"."player_id"
 JOIN "performances" ON "players"."id" = "performances"."player_id"
 WHERE "performances"."year" = 2001 AND "RBI" > 0
 AND "performances"."year" = "salaries"."year"
-ORDER BY ""dollars per RBI" ASC"
+
 LIMIT 10;
