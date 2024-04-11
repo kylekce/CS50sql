@@ -1,8 +1,8 @@
-SELECT "name"
+SELECT DISTINCT "name"
 FROM "teams"
-WHERE "year" ON (
-    SELECT "year"
-    FROM "teams"
-    GROUP BY "year"
-    HAVING COUNT("team_id") = 1
-)
+JOIN "performances" ON "teams"."id" = "performances"."team_id"
+WHERE "player_id" = (
+    SELECT "id"
+    FROM "players"
+    WHERE "first_name" = 'Satchel' AND "last_name" = 'Paige'
+);
