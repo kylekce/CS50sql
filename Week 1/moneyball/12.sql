@@ -26,5 +26,4 @@ FROM (
         LIMIT 10
     )
 )
-
 ORDER BY "id";
