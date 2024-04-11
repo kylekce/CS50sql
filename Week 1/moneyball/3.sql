@@ -1,4 +1,4 @@
-SELECT "year1"HR"
+SELECT "year", "HR"
 FROM "performances"
 WHERE "player_id" = (
     SELECT "id"
