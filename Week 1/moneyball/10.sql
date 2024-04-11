@@ -2,6 +2,6 @@ SELECT "first_name", "last_name", "salaries"."salary", "salaries"."year", "perfo
 FROM "players"
 JOIN "salaries" ON "players"."id" = "salaries"."player_id"
 JOIN "performances" ON "salaries"."year" = "performances"."year"
+WHERE "performances"."HR" != 0
 ORDER BY "players"."id" ASC, "salaries"."year" DESC, "performances"."HR" DESC, "salaries"."salary" DESC
-WHERE "performances"."H" != 0
 LIMIT 10;
