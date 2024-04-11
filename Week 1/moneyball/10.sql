@@ -1,4 +1,4 @@
-SELECT "players"."id", "first_name", "last_name", "salaries"."salary", "salaries"."year", "performances"."HR"
+SELECT DISTINCT "players"."id", "first_name", "last_name", "salaries"."salary", "salaries"."year", "performances"."HR"
 FROM "players"
 JOIN "salaries" ON "players"."id" = "salaries"."player_id"
 JOIN "performances" ON "salaries"."year" = "performances"."year"
