@@ -1,8 +1,7 @@
-SELECT "name", SUM("H") AS "Total Hits"
+SELECT "name", SUM("performances"."H") AS "total hits"
 FROM "teams"
-WHERE "id" ON (
-    SELECT "team_id"
-    FROM "performances"
-    WHERE "year" = 2001
-)
+JOIN "performances" ON "teams"."id" = "performances"."team_id"
+WHERE "teams"."year" = 2001
+GROUP BY "name"
+ORDER BY "total hits" DESC
 LIMIT 5;
