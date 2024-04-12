@@ -7,12 +7,31 @@ CREATE TABLE "passengers"
     PRIMARY KEY ("id")
 );
 
+CREATE TABLE "airlines"
+(
+    "id",
+    "name" TEXT NOT NULL,
+    "concourse" TEXT NOT NULL CHECK("concourse" IN ('A', 'B', 'C', 'D', 'E', 'F', 'T')),  
+    PRIMARY KEY ("id")
+);
+
+CREATE TABLE "flights"
+(
+    "id",
+    "origin" TEXT NOT NULL,
+    "destination" TEXT NOT NULL,
+    "duration" INTEGER NOT NULL,
+    PRIMARY KEY ("id")
+);
+
 CREATE TABLE "check_ins"
 (
     "id",
+    "flight_id" INTEGER NOT NULL,
     "passenger_id" INTEGER NOT NULL,
-    "check_in_time" TIMESTAMP NOT NULL,
-    "check_out_time" TIMESTAMP,
+    "date" TEXT NOT NULL,
+    "time" TEXT NOT NULL,
     PRIMARY KEY ("id"),
+    FOREIGN KEY ("flight_id") REFERENCES "flights" ("id"),
     FOREIGN KEY ("passenger_id") REFERENCES "passengers" ("id")
 );
