@@ -19,10 +19,13 @@ CREATE TABLE "flights"
 (
     "id",
     "flight_number" TEXT NOT NULL,
+    "airline_id" INTEGER NOT NULL,
     "origin" TEXT NOT NULL,
     "destination" TEXT NOT NULL,
-    "duration" INTEGER NOT NULL,
+    "departure_date_and_time" TEXT NOT NULL,
+    "arrival_date_and_time" TEXT NOT NULL,
     PRIMARY KEY ("id")
+    FOREIGN KEY ("airline_id") REFERENCES "airlines" ("id")
 );
 
 CREATE TABLE "check_ins"
