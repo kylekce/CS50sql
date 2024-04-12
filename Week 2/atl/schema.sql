@@ -18,6 +18,7 @@ CREATE TABLE "airlines"
 CREATE TABLE "flights"
 (
     "id",
+    "flight_number" TEXT NOT NULL,
     "origin" TEXT NOT NULL,
     "destination" TEXT NOT NULL,
     "duration" INTEGER NOT NULL,
