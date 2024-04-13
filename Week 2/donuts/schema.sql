@@ -11,9 +11,17 @@ CREATE TABLE "donuts" (
     "name" TEXT NOT NULL,
     "gluten_free" INTEGER NOT NULL CHECK("gluten_free" IN (0, 1)),
     "price" REAL NOT NULL,
-    "ingredients" INTEGER NOT NULL,
     PRIMARY KEY ("id"),
-    FOREIGN KEY ("ingredients") REFERENCES "ingredients" ("id")
+)
+
+CREATE TABLE "donut_ingredients" (
+    "id",
+    "donut_id" INTEGER NOT NULL,
+    "ingredient_id" INTEGER NOT NULL,
+    "quantity" INTEGER NOT NULL,
+    PRIMARY KEY ("id"),
+    FOREIGN KEY ("donut_id") REFERENCES "donuts" ("id"),
+    FOREIGN KEY ("ingredient_id") REFERENCES "ingredients" ("id")
 )
 
 CREATE TABLE "customers" (
