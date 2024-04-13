@@ -36,11 +36,11 @@ CREATE TABLE "customers" (
 
 CREATE TABLE "orders" (
     "id",
+    "customer_id" INTEGER NOT NULL,
     "order_number" INTEGER NOT NULL,
     "donuts" INTEGER NOT NULL,
     "quantity" INTEGER NOT NULL,
-    "customer" INTEGER NOT NULL,
     PRIMARY KEY ("id"),
-    FOREIGN KEY ("donuts") REFERENCES "donuts" ("id"),
     FOREIGN KEY ("customer") REFERENCES "customers" ("id")
+    FOREIGN KEY ("donuts") REFERENCES "donuts" ("id"),
 )
