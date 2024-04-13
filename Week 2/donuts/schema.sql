@@ -16,12 +16,21 @@ CREATE TABLE "donuts" (
     FOREIGN KEY ("ingredients") REFERENCES "ingredients" ("id")
 )
 
+CREATE TABLE "customers" (
+    "id",
+    "first_name" TEXT NOT NULL,
+    "last_name" TEXT NOT NULL,
+    "history" INTEGER NOT NULL,
+    PRIMARY KEY ("id")
+    FOREIGN KEY ("history") REFERENCES "orders" ("id")
+)
+
 CREATE TABLE "orders" (
     "id",
-    "donut_id" INTEGER NOT NULL,
+    "order_number" INTEGER NOT NULL UNIQUE,
+    "donuts" INTEGER NOT NULL,
     "quantity" INTEGER NOT NULL,
-    "total_price" REAL NOT NULL,
-    "order_date" TEXT NOT NULL,
+
     PRIMARY KEY ("id"),
-    FOREIGN KEY ("donut_id") REFERENCES "donuts" ("id")
+    FOREIGN KEY ("donuts") REFERENCES "donuts" ("id")
 )
