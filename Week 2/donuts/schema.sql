@@ -20,8 +20,6 @@ CREATE TABLE "history" (
     "id",
     "customer_id" INTEGER NOT NULL,
     "order_number" INTEGER NOT NULL,
-    "date" TEXT NOT NULL,
-    "total" REAL NOT NULL,
     PRIMARY KEY ("id"),
     FOREIGN KEY ("order_number") REFERENCES "orders" ("order_number")
 )
