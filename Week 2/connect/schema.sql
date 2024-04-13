@@ -36,8 +36,22 @@ CREATE TABLE "school_connections" (
     "id",
     "user_id" INTEGER NOT NULL,
     "school_id" INTEGER NOT NULL,
-    "graduation_year" TEXT NOT NULL,
+    "start_date" TEXT NOT NULL,
+    "end_date" TEXT,
+    "degree" TEXT NOT NULL,
     PRIMARY KEY ("id"),
     FOREIGN KEY ("user_id") REFERENCES "users" ("id"),
     FOREIGN KEY ("school_id") REFERENCES "schools" ("id")
+);
+
+CREATE TABLE "company_connections" (
+    "id",
+    "user_id" INTEGER NOT NULL,
+    "company_id" INTEGER NOT NULL,
+    "start_date" TEXT NOT NULL,
+    "end_date" TEXT,
+    "title" TEXT NOT NULL,
+    PRIMARY KEY ("id"),
+    FOREIGN KEY ("user_id") REFERENCES "users" ("id"),
+    FOREIGN KEY ("company_id") REFERENCES "companies" ("id")
 );
