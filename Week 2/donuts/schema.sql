@@ -25,6 +25,7 @@ CREATE TABLE "customers" (
 
 CREATE TABLE "orders" (
     "id",
+    "order_number" INTEGER NOT NULL,
     "customer_id" INTEGER NOT NULL,
     "donut_id" INTEGER NOT NULL,
     PRIMARY KEY ("id"),
