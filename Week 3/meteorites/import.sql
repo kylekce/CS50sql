@@ -1,0 +1,1 @@
+INSERT INTO "meteorites" ("name", "mass", "year", "reclat", "reclong", "geolocation")
