@@ -30,14 +30,14 @@ CREATE TABLE "meteorites" (
     "nametype" TEXT,
     "class" TEXT,
     "mass" REAL,
-    "discovery" TEXT CHECK("discovery" IN ('Fell', 'Found'))
+    "discovery" TEXT CHECK("discovery" IN ('Fell', 'Found')),
     "year" INTEGER,
     "lat" REAL,
     "long" REAL,
     PRIMARY KEY ("id")
 );
 
-INSERT INTO "meteorites" 
+INSERT INTO "meteorites" ("name", "nametype", "class", "mass", "discovery", "year", "lat", "long")
 SELECT "name", "nametype", "class", "mass", "discovery", "year", "lat", "long"
 FROM "meteorites_temp"
 ORDER BY "year" DESC, "name" ASC;
