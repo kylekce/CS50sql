@@ -1,11 +1,14 @@
-CREATE TABLE "meteorites_temp" (
-    "name", 
-    "id",
-    "nametype",
-    "class",
-    "mass",
-    "discovery"
-    "year",
-    "lat"
-    "long"
-);
+-- CREATE TABLE "meteorites_temp" (
+--     "name" TEXT, 
+--     "id",
+--     "nametype" TEXT,
+--     "class" TEXT,
+--     "mass" REAL,
+--     "discovery" TEXT,
+--     "year" REAL,
+--     "lat" REAL,
+--     "long" REAL,
+--     PRIMARY KEY ("id")
+-- );
+
+.import --csv meteorites.csv meteorites_temp 
