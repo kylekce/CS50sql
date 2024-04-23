@@ -11,4 +11,4 @@
 --     PRIMARY KEY ("id")
 -- );
 
-.import --csv meteorites.csv meteorites_temp 
+-- .import --csv --skip 1 meteorites.csv meteorites_temp
