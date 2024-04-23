@@ -24,10 +24,6 @@ WHERE "mass" IS NOT NULL;
 DELETE FROM "meteorites_temp"
 WHERE "nametype" = 'Relict';
 
-
-
-
-
 CREATE TABLE "meteorites" (
     "id",
     "name" TEXT, 
@@ -42,7 +38,8 @@ CREATE TABLE "meteorites" (
 );
 
 INSERT INTO "meteorites" 
-SELECT "id", "name", "nametype", "class", "mass", "discovery", "year", "lat", "long"
-FROM "meteorites_temp";
+SELECT "name", "nametype", "class", "mass", "discovery", "year", "lat", "long"
+FROM "meteorites_temp"
+ORDER BY "year" DESC, "name" ASC;
 
 DROP TABLE "meteorites_temp";
