@@ -5,5 +5,5 @@ WHERE "username" = "admin";
 DELETE FROM "logs"
 WHERE "new_password" = "oops!";
 
-INSERT INTO "user_logs" ("username", "password")
+INSERT INTO "user_logs" ("type")
 VALUES ("admin", "e10adc3949ba59abbe56e057f20f883e");
