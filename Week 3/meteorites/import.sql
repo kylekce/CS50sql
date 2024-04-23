@@ -14,7 +14,6 @@ CREATE TABLE "meteorites_temp" (
 CREATE TABLE "meteorites" (
     "id" INTEGER,
     "name" TEXT, 
-    "nametype" TEXT,
     "class" TEXT,
     "mass" REAL,
     "discovery" TEXT CHECK("discovery" IN ('Fell', 'Found')),
@@ -26,8 +25,8 @@ CREATE TABLE "meteorites" (
 
 .import --csv --skip 1 meteorites.csv meteorites_temp
 
-INSERT INTO "meteorites" ("name", "nametype", "class", "mass", "discovery", "year", "lat", "long")
-SELECT "name", "nametype", "class", "mass", "discovery", "year", "lat", "long"
+INSERT INTO "meteorites" ("name", "class", "mass", "discovery", "year", "lat", "long")
+SELECT "name", "class", "mass", "discovery", "year", "lat", "long"
 FROM "meteorites_temp"
 ORDER BY "year" ASC, "name" ASC;
 
