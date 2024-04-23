@@ -25,6 +25,9 @@ CREATE TABLE "meteorites" (
 
 .import --csv --skip 1 meteorites.csv meteorites_temp
 
+DELETE FROM "meteorites_temp"
+WHERE "nametype" LIKE 'Relict';
+
 INSERT INTO "meteorites" ("name", "class", "mass", "discovery", "year", "lat", "long")
 SELECT "name", "class", "mass", "discovery", "year", "lat", "long"
 FROM "meteorites_temp"
@@ -37,8 +40,5 @@ WHERE "mass" IS NOT NULL;
 UPDATE "meteorites"
 SET "mass" = NULL, "year" = NULL, "lat" = NULL, "long" = NULL
 WHERE "mass" = 0 OR "year" = 0 OR "lat" = 0 OR "long" = 0;
-
-DELETE FROM "meteorites"
-WHERE "nametype" = 'Relict';
 
 DROP TABLE "meteorites_temp";
