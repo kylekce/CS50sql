@@ -15,7 +15,7 @@ CREATE TABLE "meteorites_temp" (
 
 UPDATE "meteorites_temp"
 SET "mass" = NULL, "year" = NULL, "lat" = NULL, "long" = NULL
-WHERE "mass" = '' OR "year" = '' OR "lat" = '' OR "long" = '';
+WHERE "mass" = 0 OR "year" = 0 OR "lat" = 0 OR "long" = 0;
 
 UPDATE "meteorites_temp"
 SET "mass" = ROUND("mass", 2), "lat" = ROUND("lat", 2), "long" = ROUND("long", 2)
@@ -25,7 +25,7 @@ DELETE FROM "meteorites_temp"
 WHERE "nametype" = 'Relict';
 
 CREATE TABLE "meteorites" (
-    "id",
+    "id" INTEGER,
     "name" TEXT, 
     "nametype" TEXT,
     "class" TEXT,
