@@ -1,1 +1,3 @@
-INSERT INTO "meteorites" ("name", "mass", "year", "reclat", "reclong", "geolocation")
+CREATE TABLE "meteorites_temp" (
+    "name", "mass", "year", "reclat", "reclong", "geolocation"
+);
