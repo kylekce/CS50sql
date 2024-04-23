@@ -15,11 +15,11 @@ CREATE TABLE "meteorites" (
     "id" INTEGER,
     "name" TEXT, 
     "class" TEXT,
-    "mass" REAL,
+    "mass" REAL DEFAULT NULL,
     "discovery" TEXT CHECK("discovery" IN ('Fell', 'Found')),
-    "year" INTEGER,
-    "lat" REAL,
-    "long" REAL,
+    "year" INTEGER DEFAULT NULL,
+    "lat" REAL DEFAULT NULL,
+    "long" REAL DEFAULT NULL,
     PRIMARY KEY ("id")
 );
 
