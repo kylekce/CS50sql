@@ -28,17 +28,17 @@ CREATE TABLE "meteorites" (
 DELETE FROM "meteorites_temp"
 WHERE "nametype" LIKE 'Relict';
 
+UPDATE "meteorites_temp"
+SET "mass" = ROUND("mass", 2), "lat" = ROUND("lat", 2), "long" = ROUND("long", 2)
+WHERE "mass" IS NOT NULL;
+
+UPDATE "meteorites_temp"
+SET "mass" = NULL, "year" = NULL, "lat" = NULL, "long" = NULL
+WHERE "mass" = 0 OR "year" = 0 OR "lat" = 0 OR "long" = 0;
+
 INSERT INTO "meteorites" ("name", "class", "mass", "discovery", "year", "lat", "long")
 SELECT "name", "class", "mass", "discovery", "year", "lat", "long"
 FROM "meteorites_temp"
 ORDER BY "year" ASC, "name" ASC;
-
-UPDATE "meteorites"
-SET "mass" = ROUND("mass", 2), "lat" = ROUND("lat", 2), "long" = ROUND("long", 2)
-WHERE "mass" IS NOT NULL;
-
-UPDATE "meteorites"
-SET "mass" = NULL, "year" = NULL, "lat" = NULL, "long" = NULL
-WHERE "mass" = 0 OR "year" = 0 OR "lat" = 0 OR "long" = 0;
 
 DROP TABLE "meteorites_temp";
