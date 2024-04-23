@@ -32,12 +32,12 @@ FROM "meteorites_temp"
 ORDER BY "year" ASC, "name" ASC;
 
 UPDATE "meteorites"
-SET "mass" = NULL, "year" = NULL, "lat" = NULL, "long" = NULL
-WHERE "mass" = 0 OR "year" = 0 OR "lat" = 0 OR "long" = 0;
-
-UPDATE "meteorites"
 SET "mass" = ROUND("mass", 2), "lat" = ROUND("lat", 2), "long" = ROUND("long", 2)
 WHERE "mass" IS NOT NULL;
+
+UPDATE "meteorites"
+SET "mass" = NULL, "year" = NULL, "lat" = NULL, "long" = NULL
+WHERE "mass" = 0 OR "year" = 0 OR "lat" = 0 OR "long" = 0;
 
 DELETE FROM "meteorites"
 WHERE "nametype" = 'Relict';
