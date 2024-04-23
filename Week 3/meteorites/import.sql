@@ -13,7 +13,7 @@
 
 -- .import --csv --skip 1 meteorites.csv meteorites_temp
 
-CREATE TABLE "meteorites_temp" (
+CREATE TABLE "meteorites" (
     "id",
     "name" TEXT, 
     "nametype" TEXT,
@@ -26,5 +26,6 @@ CREATE TABLE "meteorites_temp" (
     PRIMARY KEY ("id")
 );
 
-INSERT INTO meteorites 
-SELECT * FROM meteorites_temp;
+INSERT INTO "meteorites" 
+SELECT "id", "name", "nametype", "class", "mass", "discovery", "year", "lat", "long"
+FROM "meteorites_temp";
