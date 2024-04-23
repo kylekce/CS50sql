@@ -34,19 +34,19 @@ WHERE "mass" IS NOT NULL;
 
 UPDATE "meteorites_temp"
 SET "mass" = NULL
-WHERE "mass" = 0;
+WHERE "mass" = 0 OR "mass" LIKE '';
 
 UPDATE "meteorites_temp"
 SET "year" = NULL
-WHERE "year" = 0;
+WHERE "year" = 0 OR "year" LIKE '';
 
 UPDATE "meteorites_temp"
 SET "lat" = NULL
-WHERE "lat" = 0;
+WHERE "lat" = 0 OR "lat" LIKE '';
 
 UPDATE "meteorites_temp"
 SET "long" = NULL
-WHERE "long" = 0;
+WHERE "long" = 0 OR "long" LIKE '';
 
 INSERT INTO "meteorites" 
 ("name", "class", "mass", "discovery", "year", "lat", "long")
