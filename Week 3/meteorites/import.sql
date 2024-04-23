@@ -5,7 +5,7 @@
 --     "class" TEXT,
 --     "mass" REAL,
 --     "discovery" TEXT,
---     "year" REAL,
+--     "year" INTEGER,
 --     "lat" REAL,
 --     "long" REAL,
 --     PRIMARY KEY ("id")
