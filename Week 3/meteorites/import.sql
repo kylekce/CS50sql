@@ -1,13 +1,13 @@
 CREATE TABLE "meteorites_temp" (
-    "name", 
-    "id",
-    "nametype",
-    "class",
-    "mass",
-    "discovery",
-    "year",
-    "lat",
-    "long",
+    "name" TEXT, 
+    "id" INTEGER,
+    "nametype" TEXT,
+    "class" TEXT,
+    "mass" REAL,
+    "discovery" TEXT,
+    "year" INTEGER,
+    "lat" REAL,
+    "long" REAL,
     PRIMARY KEY ("id")
 );
 
