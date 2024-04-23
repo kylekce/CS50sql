@@ -42,4 +42,4 @@ SELECT "name", "nametype", "class", "mass", "discovery", "year", "lat", "long"
 FROM "meteorites_temp"
 ORDER BY "year" DESC, "name" ASC;
 
-DROP TABLE "meteorites_temp";
+-- DROP TABLE "meteorites_temp";
