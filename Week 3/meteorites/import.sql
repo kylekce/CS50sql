@@ -36,7 +36,8 @@ UPDATE "meteorites_temp"
 SET "mass" = NULL, "year" = NULL, "lat" = NULL, "long" = NULL
 WHERE "mass" = 0 OR "year" = 0 OR "lat" = 0 OR "long" = 0;
 
-INSERT INTO "meteorites" ("name", "class", "mass", "discovery", "year", "lat", "long")
+INSERT INTO "meteorites" 
+("name", "class", "mass", "discovery", "year", "lat", "long")
 SELECT "name", "class", "mass", "discovery", "year", "lat", "long"
 FROM "meteorites_temp"
 ORDER BY "year" ASC, "name" ASC;
