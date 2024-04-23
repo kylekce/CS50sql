@@ -29,7 +29,7 @@ CREATE TABLE "meteorites" (
 INSERT INTO "meteorites" ("name", "nametype", "class", "mass", "discovery", "year", "lat", "long")
 SELECT "name", "nametype", "class", "mass", "discovery", "year", "lat", "long"
 FROM "meteorites_temp"
-ORDER BY "year" DESC, "name" ASC;
+ORDER BY "year" ASC, "name" ASC;
 
 UPDATE "meteorites"
 SET "mass" = NULL, "year" = NULL, "lat" = NULL, "long" = NULL
@@ -42,4 +42,4 @@ WHERE "mass" IS NOT NULL;
 DELETE FROM "meteorites"
 WHERE "nametype" = 'Relict';
 
--- DROP TABLE "meteorites_temp";
+DROP TABLE "meteorites_temp";
