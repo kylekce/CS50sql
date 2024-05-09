@@ -1,4 +1,4 @@
 CREATE VIEW "total" AS
-SELECT SUM("families"), SUM("households") as "households", SUM("population"), SUM("male"), SUM("female")
+SELECT SUM("families"), SUM("households") AS "households", SUM("population"), SUM("male"), SUM("female")
 FROM "census"
 GROUP BY "locality";
