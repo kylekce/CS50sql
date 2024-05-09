@@ -1,2 +1,4 @@
 CREATE TEMPORARY VIEW "rural" AS
-SELECT 
+SELECT *
+FROM "census"
+WHERE "locality" LIKE '%Rural%';
