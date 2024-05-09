@@ -1,2 +1,4 @@
 CREATE VIEW "total" AS
-SELECT *
+SELECT SUM("families")
+FROM "census";
+WHERE
