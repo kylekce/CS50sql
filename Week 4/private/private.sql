@@ -42,6 +42,6 @@ SELECT substr("sentence", 14, 5)
 FROM "sentences"
 WHERE "ID" = 3041;
 
-CREATE VIEW "sentences_temp" AS
+CREATE VIEW "message" AS
 SELECT "phrase" 
 FROM "sentences_temp";
