@@ -1,5 +1,5 @@
 CREATE VIEW "frequently_reviewed" AS
-SELECT "listing_id", "property_type", "host_name", SUM("reviews")
+SELECT "listing_id", "property_type", "host_name", COUNT("*")
 FROM "reviews"
 JOIN "listings" ON "reviews"."listing_id" = "listings"."id"
 GROUP BY "listing_id"
