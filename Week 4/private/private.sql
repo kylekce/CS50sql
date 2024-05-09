@@ -1,6 +1,8 @@
-CREATE TEMPORARY VIEW "message" AS
-SELECT "phrase" 
-FROM "message";
+CREATE TABLE "sentences" (
+    "ID" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "sentence" TEXT
+);`1    
+
 
 INSERT INTO "message" ("phrase")
 SELECT substr("sentence", 98, 4) 
@@ -41,3 +43,7 @@ INSERT INTO "message" ("phrase")
 SELECT substr("sentence", 14, 5) 
 FROM "sentences"
 WHERE "ID" = 3041;
+
+CREATE TEMPORARY VIEW "message" AS
+SELECT "phrase" 
+FROM "sentences_temp";
