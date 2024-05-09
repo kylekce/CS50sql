@@ -1,2 +1,2 @@
 CREATE VIEW "message" AS
-S
+SELECT "phrase" FROM "message"
