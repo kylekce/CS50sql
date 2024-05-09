@@ -1,5 +1,6 @@
 CREATE TEMPORARY VIEW "message" AS
-SELECT "phrase" FROM "message"
+SELECT "phrase" 
+FROM "message";
 
 INSERT INTO "message" ("phrase")
 VALUES (
