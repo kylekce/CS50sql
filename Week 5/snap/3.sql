@@ -6,5 +6,5 @@ WHERE "from_user_id" == (
     WHERE "username" == 'creativewisdom377'
 )
 GROUP BY "to_user_id"
-ORDER BY COUNT("id") DESC
+ORDER BY COUNT("to_user_id") DESC
 LIMIT 3;
