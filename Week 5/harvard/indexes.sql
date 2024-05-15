@@ -1,1 +1,1 @@
-CREATE INDEX "semester_index" ON "harvard" ("semester");
+CREATE INDEX "semester_index" ON "courses" ("semester");
