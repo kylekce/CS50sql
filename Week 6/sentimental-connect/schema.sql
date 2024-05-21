@@ -8,35 +8,35 @@ CREATE TABLE `users` (
 );
 
 CREATE TABLE `schools` (
-    `id`,
-    `name` TEXT NOT NULL,
-    `type` TEXT NOT NULL,
-    `location` TEXT NOT NULL,
-    `founded` TEXT NOT NULL,
+    `id` INT AUTO_INCREMENT,
+    `name` VARCHAR(32) NOT NULL,
+    `type` ENUM(`Primary`, `Secondary`, `Higher Education`) NOT NULL,
+    `location` VARCHAR(64) NOT NULL,
+    `founded` YEAR NOT NULL,
     PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `companies` (
-    `id`,
-    `name` TEXT NOT NULL,
-    `industry` TEXT NOT NULL,
-    `location` TEXT NOT NULL,
+    `id` INT AUTO_INCREMENT,
+    `name` VARCHAR(32) NOT NULL,
+    `industry` ENUM(`Technology`, `Education`, `Business`) NOT NULL,
+    `location` VARCHAR(64) NOT NULL,
     PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `user_connections` (
-    `id`,
-    `user_id` INTEGER NOT NULL,
-    `connection_id` INTEGER NOT NULL,
+    `id` INT AUTO_INCREMENT,,
+    `user_id` INT NOT NULL,
+    `connection_id` INT NOT NULL,
     PRIMARY KEY (`id`),
     FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
     FOREIGN KEY (`connection_id`) REFERENCES `users` (`id`)
 );
 
 CREATE TABLE `school_connections` (
-    `id`,
-    `user_id` INTEGER NOT NULL,
-    `school_id` INTEGER NOT NULL,
+    `id` INT AUTO_INCREMENT,,
+    `user_id` INT NOT NULL,
+    `school_id` INT NOT NULL,
     `start_date` TEXT NOT NULL,
     `end_date` TEXT,
     `degree` TEXT NOT NULL,
@@ -46,9 +46,9 @@ CREATE TABLE `school_connections` (
 );
 
 CREATE TABLE `company_connections` (
-    `id`,
-    `user_id` INTEGER NOT NULL,
-    `company_id` INTEGER NOT NULL,
+    `id` INT AUTO_INCREMENT,,
+    `user_id` INT NOT NULL,
+    `company_id` INT NOT NULL,
     `start_date` TEXT NOT NULL,
     `end_date` TEXT,
     `title` TEXT NOT NULL,
