@@ -14,6 +14,7 @@ The researcher will need to query on all three boats since the obeservations are
 No, the observations will not be evenly distributed across all boats. This is because the data commonly collects observations between midnight and 1am, and that range of time is partitioned on Boat A. This means that Boat A will have all or most of the observations compared to the other two boats.
 
 <!-- Suppose a researcher wants to query for all observations between midnight and 1am. On how many of the boats will they need to run the query? -->
+The researcher will only need to query one boat, specifically Boat A. This is because Boat A is partitioned to receive all observations within the hours of midnight to 7:59 AM.
 
 ## Partitioning by Hash Value
 
