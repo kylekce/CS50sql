@@ -13,6 +13,8 @@ The researcher will need to query on all three boats since the obeservations are
 <!-- Will the observations likely be evenly distributed across all boats, even if AquaByte most commonly collects observations between midnight and 1am? Why or why not? -->
 No, the observations will not be evenly distributed across all boats. This is because the data commonly collects observations between midnight and 1am, and that range of time is partitioned on Boat A. This means that Boat A will have all or most of the observations compared to the other two boats.
 
+<!-- Suppose a researcher wants to query for all observations between midnight and 1am. On how many of the boats will they need to run the query? -->
+
 ## Partitioning by Hash Value
 
 TODO
