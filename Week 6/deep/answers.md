@@ -10,8 +10,7 @@ Yes, it will be distirbuted evenly. This is because with the random distribution
 The researcher will need to query on all three boats since the data is randomly distributed between the boats, so there is no guarantee that a single boat will have all the observations between midnight and 1am.
 
 ## Partitioning by Hour
-
-TODO
+<!-- Will the observations likely be evenly distributed across all boats, even if AquaByte most commonly collects observations between midnight and 1am? Why or why not? -->
 
 ## Partitioning by Hash Value
 
