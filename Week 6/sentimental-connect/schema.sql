@@ -1,8 +1,9 @@
 CREATE TABLE `users` (
     `id` INT AUTO_INCREMENT,
-    `first_name` TEXT NOT NULL,
-    `last_name` TEXT NOT NULL,
-    `password` TEXT NOT NULL,
+    `first_name` VARCHAR(32) NOT NULL,
+    `last_name` VARCHAR(32) NOT NULL,
+    `username` VARCHAR(32) NOT NULL,
+    `password` VARCHAR(128) NOT NULL,
     PRIMARY KEY (`id`)
 );
 
