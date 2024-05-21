@@ -24,3 +24,4 @@ Yes, the observations will likely be evenly distributed across all boats since t
 The researcher will need to query on all three boats since the hash value is independent of the timestamp, so there is no guarantee that a single boat will have all the observations between midnight and 1am.
 
 <!-- Suppose a researcher wants to query for a specific observation, which occurred at exactly 2023-11-01 00:00:01.020. On how many of the boats will they need to run the query? -->
+Since the hash function consistently maps the same timestamp to the same hash value, the researcher will only need to query on the boat that corresponds to the hash value generated for the timestamp "2023-11-01 00:00:01.020".
