@@ -17,5 +17,5 @@ No, the observations will not be evenly distributed across all boats. This is be
 The researcher will only need to query one boat, specifically Boat A. This is because Boat A is partitioned to receive all observations within the hours of midnight to 7:59 AM.
 
 ## Partitioning by Hash Value
-
-TODO
+<!-- Will the observations likely be evenly distributed across all boats, even if AquaByte most commonly collects observations between midnight and 1am? Why or why not? -->
+Yes, the observations will likely be evenly distributed across all boats.
