@@ -7,11 +7,12 @@ In this problem, you'll write freeform responses to the questions provided in th
 Yes, it will be distirbuted evenly. This is because with the random distribution, it gives each boat a 33.3% chance of receiving an observation. Over a large number of observations, the distribution might approximate evenness.
 
 <!-- Suppose a researcher wants to query for all observations between midnight and 1am. On how many of the boats will they need to run the query? -->
-The researcher will need to query on all three boats since the data is randomly distributed between the boats, so there is no guarantee that a single boat will have all the observations between midnight and 1am.
+The researcher will need to query on all three boats since the obeservations are randomly distributed between the boats, so there is no guarantee that a single boat will have all the observations between midnight and 1am.
 
 ## Partitioning by Hour
 <!-- Will the observations likely be evenly distributed across all boats, even if AquaByte most commonly collects observations between midnight and 1am? Why or why not? -->
-No, the observations will not be evenly distributed across all boats. This is because the data is partitioned by time of day and Boat A will have all the observations
+No, the observations will not be evenly distributed across all boats. This is because the data commonly collects observations between midnight and 1am, and that range of time is partitioned on Boat A. This means that Boat A will have all or most of the observations compared to the other two boats.
+
 ## Partitioning by Hash Value
 
 TODO
